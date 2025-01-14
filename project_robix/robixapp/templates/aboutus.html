@@ -1,0 +1,247 @@
+{% extends 'layout/app-layout.html' %}
+{% block 'content' %}
+{%load static %}
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-count");
+      const current = +counter.innerText;
+      const increment = target / 100; // Adjust for speed
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCount, 30); // Adjust for smoothness
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+});
+
+</script>
+<style>
+ 
+
+
+
+</style>
+<!-- endnav -->
+<div class="top-section text-white py-5 hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center">
+                <h4 class=" mb-3 fade-in d-block">About Us</h4>
+                <h1 class="fw-bold ">Robotic Arms <span class="underline-effect">Revolution</span><br><span class="d-block text-center">Precision Unleashed</span></h1>
+             
+                <h2 class="text-muted mt-3 fade-in servicep">
+                    Embark on a transformative journey into the heart of  Industry 4.0 with our revolutionary robotic arms.
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- image section -->
+<div class=" bg-light py-n5" >
+    <div class="container" >
+        <div class="row align-items-center" >
+            <!-- Left Section: Image with Play Button -->
+            <div class="col-lg-12 text-center text-lg-start mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <!-- Link to YouTube video -->
+                    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank">
+                        <img src="{% static 'robo.jpg' %}" alt="Robotic Arms" class="img-fluid bordered-image">
+                        <div class="play-button position-absolute top-50 start-50 translate-middle">
+                            <i class="fas fa-play text-white bg-primary p-3 rounded-circle"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            
+           </div></div>
+
+
+<div class="container py-5">
+  <div class="row align-items-center">
+      <!-- Left Column: Text -->
+      <div class="col-md-8">
+          <h5 class="text-primary">Our Story</h5>
+          <p class="text-muted fs-5">
+              Welcome to Robix, where our story in the robotic industry is one of 
+              <b>innovation and transformative</b> solutions since 2013.
+          </p>
+          <p class="text-muted">
+              Founded with a vision to redefine the landscape of industrial automation, we embarked on a journey to bring the latest advancements in robotic technology to businesses worldwide.
+          </p>
+      </div>
+      <!-- Right Column: Image -->
+      <div class="col-md-4 text-center text-md-end">
+          <img src="{% static 'workers.jpg'%}" alt="Workers" class="img-fluid rounded shadow-lg">
+      </div>
+  </div>
+</div>
+<div class="container-fluid text-white bg-dark ">
+    <div class="row d-flex justify-content-center align-items-center" style="height: 200px;">
+      <div class="col-md-3 col-6 text-center">
+        <b class="counter" data-count="10"></b><span class="suffix"><span class="blue">+</span></span>
+        <p>Years Experience</p>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <b class="counter" data-count="15"></b><span class="suffix">k<span class="blue">+</span></span>
+        <p>Projects Delivered</p>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <b class="counter" data-count="13"></b><span class="suffix">k<span class="blue">+</span></span>
+        <p>Team Members</p>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <b class="counter" data-count="99"></b><span class="suffix"><span class="blue">%</span></span>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+<!-- our vision -->
+
+<div class="container vision">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12 mb-4">
+        <img src="{% static 'ourvision.jpg' %}" class="img1 col-12">
+      </div>
+      <div class="col-lg-6 col-md-12 col-12">
+        <p class="text-primary" style="font-size: 1.5rem; font-weight: bold;">Our Vision & Mission</p>
+        <h4 style="font-size: 2rem; color: black;">Transforming Industries Through Robotic</h4>
+        
+        <div class="timeline-container position-relative">
+          <div class="timeline-line"></div> <!-- Vertical line -->
+  
+          <div class="d-flex align-items-start mb-4 position-relative">
+            <span class="timeline-dot"></span>
+            <div class="timeline-item ms-3">
+              <h4 class="timeline-title">Forefront of the robotic arms industry</h4>
+              <p class="timeline-description">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.
+              </p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-4 position-relative">
+            <span class="timeline-dot"></span>
+            <div class="timeline-item ms-3">
+              <h4 class="timeline-title">Empowering Businesses with Innovative</h4>
+              <p class="timeline-description">
+                Nullam dictum felis eu pede mollis pretium. Integer tincidunt cras dapibus. Vivamus elementum aenean vulputate.
+              </p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start position-relative">
+            <span class="timeline-dot"></span>
+            <div class="timeline-item ms-3">
+              <h4 class="timeline-title">Trailblazing the Robotic Frontier</h4>
+              <p class="timeline-description">
+                Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum aenean imperdiet etiam ultricies nisi vel augue ullamcorper.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!--  -->
+
+
+        <div class="custom-background-section" style="position: relative;">
+            <div class="container py-5">
+              <div class="row align-items-center">
+                <div class="col-lg-6 col-md-8 col-sm-12">
+                  <div class="blur-card p-4">
+                    <p class="display-4">Transform Your Operations Today! Explore Our Robotic Arm Solutions</p>
+                    <p class="lead">Explore cutting-edge automation designed to transform your business efficiency.</p>
+                    <div class="d-flex flex-wrap">
+                      <a href="#" class="btn btn-warning btn-lg rounded-pill me-3 mb-2" >Get Started</a>
+                      <a href="#" class="btn btn-link btn-lg text-white straight-line mb-2" style="border-radius: 0;">Learn More
+                         <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+            
+    
+        
+        <div class="container-fluid bg-white mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="image-container1">
+                        <img src="  {% static 'people.jpg'%}" alt="Person" class="img-fluid">
+                        <div class="overlay">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box2 text-center ">
+                            <h3 ><b>Anna</h3></b>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="image-container1">
+                        <img src="  {% static 'workimg1.jpg'%}" alt="Person" class="img-fluid">
+                        <div class="overlay">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box2 text-center">
+                            <h3><b>George</h3></b>
+                            <p>Developer</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="image-container1">
+                        <img src="{% static 'workimg2.jpg' %}" alt="Person" class="img-fluid">
+                        <div class="overlay">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f "></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box2 text-center">
+                            <h3><b>John</h3></b>
+                            <p>Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+        {%endblock%}
+  
+        {% block 'footer' %}
+        {%endblock%}

@@ -1,0 +1,29 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual Environment
+venv/
+env/
+.virtualenv/
+
+# Django stuff
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# Byte-compiled files
+*.pyc
+
+# Deployment
+*.DS_Store

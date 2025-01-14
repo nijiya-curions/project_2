@@ -1,0 +1,23 @@
+{% extends 'layout/app-layout.html' %}
+{% block 'content' %}
+{%load static %}
+
+<link rel="stylesheet" href="team.css">
+<body class="no-background">
+
+  <div class="container-fluid d-flex justify-content-center align-items-center full-height" style="background: linear-gradient(180deg, hsl(216, 81%, 6%), hsl(224, 70%, 21%));">
+    <div class="text-center text-white">
+      <h4 class="notfound"><span class="underline-effect active">404 </span></h4><br> 
+      <h5 class="notfound">Oops! Page not found</h5><br> 
+      <p>We apologize, but the page you're looking for cannot be found. It may have been moved, deleted, or is temporarily unavailable.</p> 
+      <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    </div>
+  </div>
+  
+
+   {%endblock%}
+  
+   {% block footer %}
+   <!-- Empty footer block to override the include -->
+   {% endblock %}
+   </body>

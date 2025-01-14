@@ -1,0 +1,144 @@
+{% extends 'layout/app-layout.html' %}
+{% block 'content' %}
+{%load static %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body class="no-background">
+    <div class="centered-content4 hero-section">
+        <h2 class="display-4 mb-3 fade-in d-block servicehead" >Blog</h2><br>
+        <h5 class="fade-in d-block servicehead1">Navigating Through <br>Our <span class="underline-effect active">Blog </span>And Articles</h3><br> 
+            <p class="fade-in  servicep">Embark on a journey of knowledge as you navigate through our rich collection of articles.</p><br>    
+        </div>
+
+<!-- section2 -->
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src=" {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Tips & Trick</span>
+                <div class="content">
+                    <h5>Beyond Automation, The Art and Science of Robotic Arms</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; January 28, 2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src=" {% static 'workers.jpg' %} " alt="Card image" class="w-100">
+                <span class="badge badge-custom">Tips & Trick</span>
+                <div class="content">
+                    <h5>Exploring the Latest in Robotic Arm Technology</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; January 28, 2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src=" {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Insight</span>
+                <div class="content">
+                    <h5>From Assembly Lines to Precision Partners</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; January 28, 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5" id="card-row-1">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src=" {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Tips & Trick</span>
+                <div class="content">
+                    <h5>Beyond Automation, The Art and Science of Robotic Arms</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; January 28, 2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src="  {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Tips & Trick</span>
+                <div class="content">
+                    <h5>Exploring the Latest in Robotic Arm Technology</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; January 28, 2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src="  {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Insight</span>
+                <div class="content">
+                    <h5>From Assembly Lines to Precision Partners</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; January 28, 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initially Hidden Row (Card 4 to Card 6) -->
+    <div class="row mt-5" id="card-row-2" style="display: none;">
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src=" {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Tips & Trick</span>
+                <div class="content">
+                    <h5>Automation and Beyond in Robotics</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; February 5, 2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src="  {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Tips & Trick</span>
+                <div class="content">
+                    <h5>The Future of Robotic Arms in Manufacturing</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; February 5, 2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="custom-card position-relative">
+                <img src="  {% static 'workers.jpg' %}" alt="Card image" class="w-100">
+                <span class="badge badge-custom">Insight</span>
+                <div class="content">
+                    <h5>The Evolution of Robotic Arm Technology</h5>
+                    <p>by <a href="#" class="text-primary">John Doe</a> &bull; February 5, 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-4">
+        <button id="load-more" class="btn btn-warning btn-lg">Load More</button>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#load-more").click(function() {
+            $("#card-row-2").fadeIn();
+            $(this).hide();
+        });
+    });
+</script>
+  
+{%endblock%}
+  
+{% block 'footer' %}
+{%endblock%}
