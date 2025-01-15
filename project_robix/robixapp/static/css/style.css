@@ -1943,13 +1943,13 @@ font-weight: bold;
 transition: background 0.3s ease;
 }
 
-.btn-primary {
+.btn-warning {
 background: hsl(57, 90%, 35%);
 color: #000;
 border: 4px solid rgb(148, 148, 6);
 }
 
-.btn-primary:hover {
+.btn-warning:hover {
 background: #e6b800;
 border: 4px solid rgb(235, 235, 178);
 color: #060606;
