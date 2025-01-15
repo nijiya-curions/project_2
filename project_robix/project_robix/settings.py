@@ -120,8 +120,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR /"robixapp"/ "static"]
 
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-# MEDIA_URL = '/media/'
+
 
 # Ensure DEBUG is set to True during development to serve media files
 
